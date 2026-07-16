@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.hover\\:rotate-y-180:hover {
+  transform: rotateY(180deg);
+}
+
+
+
+.animate-slideIn {
+  animation: slideIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+.hover\\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.transform-style-3d {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slideIn {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.animate-slideIn span:last-child {
+  flex: 1;
+  word-break: break-word;
+}
+
+
+.pulse-dot {
+  background-color: #40d9a1;
+  animation: pulse-animation 1.5s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(64, 217, 161, 0.4);
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    background-color: #40d9a1;
+    transform: scale(1.1);
+  }
+
+  100% {
+    background-color: #e8fff8;
+    transform: scale(0.9);
+  }
+}

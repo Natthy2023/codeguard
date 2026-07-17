@@ -2,7 +2,7 @@ function Help() {
   return (
     <div id="help" className="w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 lg:py-20 bg-[#F4FCFB]">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
+       
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight text-[#0F172A]">
             How It Works
@@ -50,7 +50,7 @@ function Help() {
 
         <div className="relative rounded-2xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 hover:shadow-[0_8px_40px_rgb(0,0,0,0.2)] group">
           <div 
-            className="relative bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('./assets/images/heroImage.gif')] bg-no-repeat bg-center bg-cover h-75 sm:h-87.5 md:h-100 lg:h-112.5 w-full"
+            className="relative bg-[linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)),url('/assets/images/heroImage.gif')] bg-no-repeat bg-center bg-cover h-75 sm:h-87.5 md:h-100 lg:h-112.5 w-full"
           >
             
            

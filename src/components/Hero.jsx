@@ -2,7 +2,7 @@ function Hero() {
   return(
     <div 
       id="home" 
-      className="w-full min-h-screen flex items-center justify-center flex-col text-white py-20 sm:py-28 md:py-40 lg:py-60 sm:px-6 md:px-8 bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url('./assets/images/heroImage.gif')]"
+      className="w-full min-h-screen flex items-center justify-center flex-col text-white py-20 sm:py-28 md:py-40 lg:py-60 sm:px-6 md:px-8 bg-no-repeat bg-cover bg-center bg-[linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url('/assets/images/heroImage.gif')]"
     >
       
       <div className="max-w-8xl mx-auto text-center">

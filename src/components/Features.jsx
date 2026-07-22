@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
-function Features() {
+function Features(props) {
+  const {isDark} = props
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -56,13 +58,13 @@ function Features() {
   const { imgUrl, h3, p } = cardContent[currentIndex];
 
   return (
-    <div id="features" className="w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 lg:py-20 flex flex-col items-center text-center gap-y-8 md:gap-y-12 bg-[#F4FCFB]">
+    <div id="features" className={`w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 lg:py-20 flex flex-col items-center text-center gap-y-8 md:gap-y-12 bg-[#F4FCFB] ${isDark? 'bg-black': 'bg-white'}`}>
      
       <div className="max-w-4xl mx-auto px-2 sm:px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight text-[#0F172A]">
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight ${isDark? 'text-[#1bd5c0]':'text-[#0F172A]'}`}>
           Main Features
         </h2>
-        <p className="text-base sm:text-lg md:text-xl text-gray-400 mt-3 sm:mt-4 max-w-3xl mx-auto">
+        <p className={`text-base sm:text-lg md:text-xl  mt-3 sm:mt-4 max-w-3xl mx-auto ${isDark? 'text-[#1bd5c0]':'text-gray-400'}`}>
           Advanced security orbiting around your development ecosystem. Every language protected, every threat neutralized.
         </p>
       </div>

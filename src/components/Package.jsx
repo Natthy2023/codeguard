@@ -1,4 +1,6 @@
-function Package() {
+function Package(props) {
+  const {isDark} = props
+
   const packages = [
     {
       name: "Free",
@@ -59,14 +61,16 @@ function Package() {
     }
   ];
 
-  return (
-    <div id="packages" className="w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 lg:py-20 flex flex-col items-center text-center gap-y-8 md:gap-y-12 bg-[#F4FCFB]">
 
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight text-[#0F172A]">
+
+  return (
+    <div id="packages" className={`w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 lg:py-20 flex flex-col items-center text-center gap-y-8 md:gap-y-12 bg-[#F4FCFB] ${isDark? 'bg-black':'bg-white'}`}>
+
+      <div className='max-w-4xl mx-auto'>
+        <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight ${isDark? 'text-[#1bd5c0]':'text-[#0F172A]'}`}>
           Choose Your Protection Plan
         </h2>
-        <p className="text-base sm:text-lg md:text-xl text-gray-400 mt-3 sm:mt-4 max-w-3xl mx-auto">
+        <p className={`text-base sm:text-lg md:text-xl mt-3 sm:mt-4 max-w-3xl mx-auto ${isDark? 'text-[#1bd5c0]':'text-gray-400'}`}>
           Start free and scale as you grow. Advanced security features for every stage of your development journey.
         </p>
       </div>
@@ -78,10 +82,12 @@ function Package() {
 
               {/* Front of card */}
               <div
-                className={`absolute w-full h-full p-8 sm:p-10 border-2 rounded-[25px] shadow-lg flex flex-col items-center justify-center backface-hidden ${pkg.popular
+                className={`absolute w-full h-full p-8 sm:p-10 border-2 rounded-[25px] shadow-lg flex flex-col items-center justify-center backface-hidden
+                  ${isDark && 'bg-black'}
+                   ${pkg.popular
                   ? 'border-[#14B7A5] bg-linear-to-br from-[#A3DBCA] to-[#e8f8f0] ring-2 ring-[#14B7A5] ring-offset-2'
                   : 'border-[#059669] bg-[#A3DBCA]'
-                  }`}
+                  } `}
               >
                 {pkg.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#14B7A5] text-white text-xs sm:text-sm font-bold px-4 py-1 rounded-full whitespace-nowrap z-10">
@@ -137,7 +143,7 @@ function Package() {
                 <div className="shrink-0 mt-4 pt-4 border-t-2 border-[#14B7A5]/30">
 
                   {/* Button on back face */}
-                  <button className={`w-full ${pkg.buttonColor} text-white py-3 rounded-md hover:opacity-90 transition-all duration-300 font-semibold text-base sm:text-lg shadow-md hover:shadow-lg transform hover:scale-105`}>
+                  <button className={`w-full ${pkg.buttonColor} text-white py-3 rounded-md hover:opacity-90 transition-all duration-300 font-semibold text-base sm:text-lg shadow-md hover:shadow-lg transform hover:scale-105`} >
                     {pkg.buttonText}
                   </button>
                 </div>
@@ -161,7 +167,7 @@ function Package() {
           <span className="text-sm text-gray-600">24/7 customer support</span>
         </div>
         <div className="flex items-center gap-2">
-          <svg className="w-5 h-5 text-[#0A836C]" fill="currentColor"  fill="currentColor" viewBox="0 0 20 20">
+          <svg className="w-5 h-5 text-[#0A836C]" fill="currentColor" fill="currentColor" viewBox="0 0 20 20">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
           </svg>
           <span className="text-sm text-gray-600">Cancel anytime

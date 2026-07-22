@@ -3,10 +3,13 @@ import logoImg from "../assets/images/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+function Header(props) {
+  const {isDark, toggle} = props
 
-function Header() {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -16,7 +19,7 @@ function Header() {
   };
 
   return (
-    <header className="border-t-5 w-full border-[#14B7A5] mx-auto bg-white fixed top-0 left-0 right-0 z-50 shadow-sm">
+    <header className={`border-t-5 w-full border-[#14B7A5] mx-auto ${isDark? 'bg-black': 'bg-white'} fixed top-0 left-0 right-0 z-50 shadow-sm`}>
       <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-16">
         <div className="flex justify-between items-center h-20 md:h-24">
          
@@ -26,13 +29,13 @@ function Header() {
               src={logoImg} 
               alt="code guard logo" 
             />
-            <p className="text-xl sm:text-2xl md:text-[1.4em] font-semibold text-gray-800">
+            <p className={isDark ?"text-xl sm:text-2xl md:text-[1.4em] font-semibold text-[#14B7A5]":"text-xl sm:text-2xl md:text-[1.4em] font-semibold text-gray-800"}>
               CodeGuard
             </p>
           </div>
 
           
-          <nav className="hidden md:flex items-center gap-x-6 lg:gap-x-10">
+          <nav className={isDark?"hidden md:flex items-center bg-[#000] gap-x-6 lg:gap-x-10":"hidden md:flex items-center gap-x-6 lg:gap-x-10"}>
             <a 
               className="hover:text-[#14B7A5] text-base lg:text-[1.2em] font-semibold transition duration-200 ease-out py-2" 
               href="#home"
@@ -72,8 +75,20 @@ function Header() {
             </button>
           </div>
 
-         
+          <div className="absolute right-20 md:right-50">
+             <button
+              onClick={toggle}
+              className={isDark?"text-gray-700 hover:text-[#14B7A5] focus:outline-none transition duration-200 p-2":"text-gray-700 hover:text-[#14B7A5] focus:outline-none transition duration-200 p-2"}
+              aria-label="Toggle menu"
+            >
+              <FontAwesomeIcon 
+                icon={isDark ? faSun : faMoon} 
+                className={`text-2xl sm:text-3xl  ${isDark? 'text-[#14B7A5]':'text-gray-700'}`}
+              />
+            </button>
+          </div>
           <div className="md:hidden">
+           
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-[#14B7A5] focus:outline-none transition duration-200 p-2"
@@ -81,7 +96,7 @@ function Header() {
             >
               <FontAwesomeIcon 
                 icon={isOpen ? faX : faBars} 
-                className="text-2xl sm:text-3xl"
+                className={`text-2xl sm:text-3xl  ${isDark? 'text-[#14B7A5]':'text-gray-700'}`}
               />
             </button>
           </div>
@@ -96,7 +111,7 @@ function Header() {
           top-20 
           left-0 
           right-0 
-          bg-white 
+           ${isDark? 'bg-black':'bg-white'} 
           shadow-lg 
           border-t 
           border-gray-100
@@ -109,37 +124,37 @@ function Header() {
           overflow-y-auto
         `}
       >
-        <nav className="flex flex-col px-4 py-6 space-y-1">
+        <nav className={`flex flex-col px-4 py-6 space-y-1  ${isDark? 'text-white':'text-black'}`}>
           <a 
-            className="hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg hover:bg-[#14B7A5]/5" 
+            className={`hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg ${isDark? 'hover:bg-[#1bd8c238]': 'hover:bg-[#14B7A5]/5'}`} 
             href="#home"
             onClick={closeMenu}
           >
             Home
           </a>
           <a 
-            className="hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg hover:bg-[#14B7A5]/5" 
+            className={`hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg ${isDark? 'hover:bg-[#1bd8c238]': 'hover:bg-[#14B7A5]/5'}`}
             href="#features"
             onClick={closeMenu}
           >
             Features
           </a>
           <a 
-            className="hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg hover:bg-[#14B7A5]/5" 
+            className={`hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg ${isDark? 'hover:bg-[#1bd8c238]': 'hover:bg-[#14B7A5]/5'}`}
             href="#packages"
             onClick={closeMenu}
           >
             Packages
           </a>
           <a 
-            className="hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg hover:bg-[#14B7A5]/5" 
+            className={`hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg ${isDark? 'hover:bg-[#1bd8c238]': 'hover:bg-[#14B7A5]/5'}`}
             href="#help"
             onClick={closeMenu}
           >
             Help
           </a>
           <a 
-            className="hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg hover:bg-[#14B7A5]/5" 
+             className={`hover:text-[#14B7A5] text-lg font-medium transition duration-200 ease-out px-4 py-3 rounded-lg ${isDark? 'hover:bg-[#1bd8c238]': 'hover:bg-[#14B7A5]/5'}`}
             href="#contact"
             onClick={closeMenu}
           >

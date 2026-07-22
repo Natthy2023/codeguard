@@ -1,48 +1,49 @@
-function Help() {
+function Help(props) {
+  const {isDark} = props
   return (
-    <div id="help" className="w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 lg:py-20 bg-[#F4FCFB]">
+    <div id="help" className={`w-full px-4 sm:px-6 md:px-8 py-10 md:py-16 lg:py-20 ${isDark? 'bg-black':'bg-[#F4FCFB]'}`}>
       <div className="max-w-7xl mx-auto">
        
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight text-[#0F172A]">
+          <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight ${isDark? 'text-[#1bd5c0]':' text-[#0F172A]'}`}>
             How It Works
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-gray-400 mt-3 sm:mt-4 max-w-3xl mx-auto">
+          <p className={`text-base sm:text-lg md:text-xl  mt-3 sm:mt-4 max-w-3xl mx-auto ${isDark? 'text-[#1bd5c0]':' text-gray-400'}`}>
             Simple steps to protect your code with our advanced obfuscation technology
           </p>
         </div>
 
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-14 ">
           
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#e8f8f0]">
+          <div className={`rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border  ${isDark? 'bg-[#262928] border-[#797c7a]': 'bg-white border-[#e8f8f0]'}`}>
             <div className="flex items-center justify-center w-14 h-14 bg-[#A3DBCA] rounded-full mb-4 mx-auto">
               <span className="text-2xl font-bold text-[#0A836C]">1</span>
             </div>
-            <h3 className="text-xl font-semibold text-[#0F172A] text-center mb-2">Choose Your Plan</h3>
-            <p className="text-gray-600 text-center text-sm md:text-base">
+            <h3 className={`text-xl font-semibold ${isDark? 'text-[#A3DBCA]': 'text- #0F172A]'} text-center mb-2`}>Choose Your Plan</h3>
+            <p className={`${isDark? 'text-[#7ea297]':'text-gray-600'} text-center text-sm md:text-base`}>
               Select the protection plan that fits your needs and budget
             </p>
           </div>
 
           
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#e8f8f0]">
+          <div className={`rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border  ${isDark? 'bg-[#262928] border-[#797c7a]': 'bg-white border-[#e8f8f0]'}`}>
             <div className="flex items-center justify-center w-14 h-14 bg-[#A3DBCA] rounded-full mb-4 mx-auto">
               <span className="text-2xl font-bold text-[#0A836C]">2</span>
             </div>
-            <h3 className="text-xl font-semibold text-[#0F172A] text-center mb-2">Upload Your Code</h3>
-            <p className="text-gray-600 text-center text-sm md:text-base">
+            <h3 className={`text-xl font-semibold ${isDark? 'text-[#A3DBCA]': 'text- #0F172A]'} text-center mb-2`}>Upload Your Code</h3>
+            <p className={`${isDark? 'text-[#7ea297]':'text-gray-600'} text-center text-sm md:text-base`}>
               Upload your source code or executables for protection
             </p>
           </div>
 
           
-          <div className="bg-white rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-[#e8f8f0]">
+          <div className={`rounded-xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border  ${isDark? 'bg-[#262928] border-[#797c7a]': 'bg-white border-[#e8f8f0]'}`}>
             <div className="flex items-center justify-center w-14 h-14 bg-[#A3DBCA] rounded-full mb-4 mx-auto">
               <span className="text-2xl font-bold text-[#0A836C]">3</span>
             </div>
-            <h3 className="text-xl font-semibold text-[#0F172A] text-center mb-2">Get Protected</h3>
-            <p className="text-gray-600 text-center text-sm md:text-base">
+            <h3 className={`text-xl font-semibold ${isDark? 'text-[#A3DBCA]': 'text- #0F172A]'} text-center mb-2`}>Get Protected</h3>
+            <p className={`${isDark? 'text-[#7ea297]':'text-gray-600'} text-center text-sm md:text-base`}>
               Receive your obfuscated code with advanced security features
             </p>
           </div>

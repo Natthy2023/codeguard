@@ -1,21 +1,23 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faPhone, 
-  faLocation, 
-  faEnvelope, 
+import {
+  faPhone,
+  faLocation,
+  faEnvelope,
   faClock,
-  faArrowUp, 
+  faArrowUp,
   faPrint
 } from "@fortawesome/free-solid-svg-icons";
-import { 
-  faFacebook, 
-  faLinkedin, 
-  faTwitter, 
+import {
+  faFacebook,
+  faLinkedin,
+  faTwitter,
   faYoutube,
-  faGithub 
+  faGithub
 } from "@fortawesome/free-brands-svg-icons";
 
 function Contact() {
+  
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -27,11 +29,11 @@ function Contact() {
 
   return (
     <div id="contact" className="bg-[#07906A] text-white w-full">
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10">
-          
-          
+
+
           <div className="col-span-1 sm:col-span-2 lg:col-span-1">
             <h3 className="text-2xl font-bold mb-4">CodeGuard</h3>
             <p className="text-white/70 text-sm leading-relaxed mb-4">
@@ -44,15 +46,15 @@ function Contact() {
               <a href="#" className="bg-white/10 hover:bg-white/20 rounded-full p-2.5 transition-all duration-300 hover:scale-110">
                 <FontAwesomeIcon icon={faLinkedin} className="w-4 h-4" />
               </a>
-              
-             
+
+
               <a href="mailto:info@codeguard.com" className="bg-white/10 hover:bg-white/20 rounded-full p-2.5 transition-all duration-300 hover:scale-110">
                 <FontAwesomeIcon icon={faPrint} className="w-4 h-4" />
               </a>
             </div>
           </div>
 
-         
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2.5">
@@ -79,7 +81,7 @@ function Contact() {
             </ul>
           </div>
 
-     
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2.5">
@@ -141,7 +143,7 @@ function Contact() {
           </div>
         </div>
 
-        
+
       </div>
     </div>
   );

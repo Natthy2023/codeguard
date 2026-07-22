@@ -35,7 +35,7 @@ function Header(props) {
           </div>
 
           
-          <nav className={isDark?"hidden md:flex items-center bg-[#000] gap-x-6 lg:gap-x-10":"hidden md:flex items-center gap-x-6 lg:gap-x-10"}>
+          <nav className={`${isDark?'text-white':'text-black'} hidden md:flex items-center gap-x-6 lg:gap-x-10`}>
             <a 
               className="hover:text-[#14B7A5] text-base lg:text-[1.2em] font-semibold transition duration-200 ease-out py-2" 
               href="#home"

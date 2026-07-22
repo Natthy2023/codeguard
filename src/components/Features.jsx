@@ -64,7 +64,7 @@ function Features(props) {
         <h2 className={`text-3xl sm:text-4xl md:text-5xl lg:text-[3em] font-bold leading-tight ${isDark? 'text-[#1bd5c0]':'text-[#0F172A]'}`}>
           Main Features
         </h2>
-        <p className={`text-base sm:text-lg md:text-xl  mt-3 sm:mt-4 max-w-3xl mx-auto ${isDark? 'text-[#1bd5c0]':'text-gray-400'}`}>
+        <p className={`text-base sm:text-lg md:text-xl  mt-3 sm:mt-4 max-w-3xl mx-auto ${isDark? 'text-[#1bd5c0] ':'text-gray-400'}`}>
           Advanced security orbiting around your development ecosystem. Every language protected, every threat neutralized.
         </p>
       </div>
@@ -73,7 +73,7 @@ function Features(props) {
 
       
         <div className="w-full lg:w-1/2 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-shadow duration-300 overflow-hidden bg-white">
-          <div className="p-4 sm:p-6 md:p-8">
+          <div className='p-4 sm:p-6 md:p-8'>
             <h3 className="text-xl sm:text-2xl md:text-[1.7em] font-semibold text-center p-3 sm:p-4 md:p-5 pt-6 sm:pt-8 md:pt-10 text-[#0F172A]">
               Multi-Language Protection System
             </h3>
@@ -88,7 +88,7 @@ function Features(props) {
         </div>
 
         
-        <div className="w-full lg:w-1/2 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-shadow duration-300 overflow-hidden bg-white flex flex-col relative">
+        <div className={`w-full lg:w-1/2 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-shadow duration-300 overflow-hidden  flex flex-col relative ${isDark? 'bg-[#262928]':'bg-white'}`}>
           
          
           <div className="relative w-full overflow-hidden">
@@ -109,18 +109,18 @@ function Features(props) {
 
          
           <div className="text-left p-4 sm:p-6 md:p-8 grow">
-            <h3 className="text-xl sm:text-2xl md:text-[1.7em] font-semibold text-[#0F172A]">
+            <h3 className={`text-xl sm:text-2xl md:text-[1.7em] font-semibold  ${isDark? 'text-[#1BD5C0]':'text-[#0F172A]'}`}>
               {h3}
             </h3>
-            <p className="text-sm sm:text-base md:text-[1.1em] pt-2 sm:pt-3 md:pt-4 text-gray-500 leading-relaxed">
+            <p className={`text-sm sm:text-base md:text-[1.1em] pt-2 sm:pt-3 md:pt-4  ${isDark? 'text-[#d8dcdb]':'text-gray-500'} leading-relaxed`}>
               {p}
             </p>
             
            
             <div className="pt-4 sm:pt-5 md:pt-6 flex items-center justify-between">
               <div className="flex gap-x-2 items-center">
-                <span className="size-4 sm:size-5 rounded-full block bg-[#0A836C] animate-pulse"></span>
-                <p className="text-sm sm:text-base text-gray-500 font-medium">Active Protection</p>
+                <span className="size-4 sm:size-5 rounded-full block bg-[#36dcbe] animate-pulse"></span>
+                <p className={`text-sm sm:text-base ${isDark? 'text-[#b8b1b1]': 'text-gray-500'} font-medium`}>Active Protection</p>
               </div>
               
              

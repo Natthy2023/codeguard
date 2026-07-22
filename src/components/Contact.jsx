@@ -112,7 +112,7 @@ function Contact() {
               <div className="flex items-start gap-3">
                 <FontAwesomeIcon icon={faPhone} className="text-white/60 mt-1 w-4" />
                 <div>
-                  <p className="text-white/90 text-sm font-medium">+251 113 717 114</p>
+                  <p className="text-white/90 text-sm font-medium">+251 924382075</p>
                   <span className="text-white/50 text-xs">Primary Line</span>
                 </div>
               </div>

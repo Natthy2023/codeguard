@@ -145,7 +145,7 @@ function Features() {
             </div>
           </div>
 
-          {/* Dot Indicators */}
+         
           <div className="flex justify-center gap-2 pb-4 sm:pb-5 md:pb-6">
             {cardContent.map((_, index) => (
               <button
